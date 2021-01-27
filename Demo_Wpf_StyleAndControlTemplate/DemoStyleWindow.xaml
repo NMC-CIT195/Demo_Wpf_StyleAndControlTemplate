@@ -17,26 +17,25 @@
             <Setter Property="FontFamily" Value="Arial"/>
             <Setter Property="FontSize" Value="24"/>
             <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="FontStyle" Value="Italic"/>
             <Setter Property="HorizontalAlignment" Value="Center"/>
             <Setter Property="VerticalAlignment" Value="Center"/>
             <Setter Property="Foreground" Value="DarkGreen"/>
             <Setter Property="Background" Value="Tan"/>
         </Style>
 
-        <Style TargetType="Label">
-            <Setter Property="Template">
-                <Setter.Value>
-                    <ControlTemplate TargetType="Label">
-                        
-                        <ContentPresenter
-                            HorizontalAlignment="Center"
-                            VerticalAlignment="Center"
-                        />
-                    </ControlTemplate>
-
-                </Setter.Value>
-            </Setter>
+        <Style x:Key="FooterLabelStyle" TargetType="Label">
+            <Setter Property="Padding" Value="20"/>
+            <Setter Property="FontFamily" Value="Arial"/>
+            <Setter Property="FontSize" Value="24"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="FontStyle" Value="Italic"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="Foreground" Value="DarkGreen"/>
+            <Setter Property="Background" Value="Red"/>
         </Style>
+
     </Window.Resources>
 
     <Grid>
@@ -62,8 +61,10 @@
             <Label
                 Grid.Row="0"
                 Grid.Column="1"
+                Content="NMC Rocks!"               
+                Width="200"
+                Height="70"
                 Padding="20"
-                Content="NMC Rocks!"
                 FontFamily="Arial"
                 FontSize="24"
                 FontWeight="Bold"
@@ -77,7 +78,7 @@
                 Grid.Row="0"
                 Grid.Column="2"
                 Content="NMC Rocks!"
-                Style="{StaticResource HeaderLabelStyle}"
+                Style="{StaticResource FooterLabelStyle}"
                 />
 
             <TextBox
@@ -90,7 +91,7 @@
             .-->
             <TextBox
                 Grid.Row="1"
-                Grid.Column="0"
+                Grid.Column="1"
                 Text="Enter Text Here"/>
 
             <!--
@@ -98,7 +99,7 @@
             -->
             <TextBox
                 Grid.Row="1"
-                Grid.Column="0"
+                Grid.Column="2"
                 Text="Enter Text Here"/>
 
             <Button
@@ -111,7 +112,7 @@
             .-->
             <Button
                 Grid.Row="2"
-                Grid.Column="0"
+                Grid.Column="1"
                 Content="Push Me"/>
 
             <!--
@@ -119,7 +120,7 @@
             -->
             <Button
                 Grid.Row="2"
-                Grid.Column="0"
+                Grid.Column="2"
                 Content="Push Me"/>
 
         </Grid>
