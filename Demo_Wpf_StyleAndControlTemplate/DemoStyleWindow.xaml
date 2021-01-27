@@ -23,12 +23,15 @@
             <Label
                 Grid.Row="0"
                 Grid.Column="0"
+                Padding="20"
                 Content="NMC Rocks!"
                 FontFamily="Arial"
-                FontSize="36"
+                FontSize="24"
                 FontWeight="Bold"
                 HorizontalAlignment="Center"
-                Foreground="Red"
+                VerticalAlignment="Center"
+                Foreground="DarkGreen"
+                Background="Tan"
                 />
         </Grid>
         
