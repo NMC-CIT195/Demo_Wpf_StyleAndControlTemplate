@@ -6,6 +6,38 @@
         xmlns:local="clr-namespace:Demo_Wpf_StyleAndControlTemplate"
         mc:Ignorable="d"
         Title="Demo Style Window" Height="600" Width="800">
+
+    <Window.Resources>
+
+        <!--
+            set the Style property of a control to the key value
+        -->
+        <Style x:Key="HeaderLabelStyle" TargetType="Label">
+            <Setter Property="Padding" Value="20"/>
+            <Setter Property="FontFamily" Value="Arial"/>
+            <Setter Property="FontSize" Value="24"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="Foreground" Value="DarkGreen"/>
+            <Setter Property="Background" Value="Tan"/>
+        </Style>
+
+        <Style TargetType="Label">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Label">
+                        <ContentPresenter
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Center"
+                        />
+                    </ControlTemplate>
+
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+
     <Grid>
         <Grid
             Margin="20">
@@ -23,6 +55,12 @@
             <Label
                 Grid.Row="0"
                 Grid.Column="0"
+                Content="NMC Rocks!"
+                />
+
+            <Label
+                Grid.Row="0"
+                Grid.Column="1"
                 Padding="20"
                 Content="NMC Rocks!"
                 FontFamily="Arial"
@@ -33,7 +71,56 @@
                 Foreground="DarkGreen"
                 Background="Tan"
                 />
+
+            <Label
+                Grid.Row="0"
+                Grid.Column="2"
+                Content="NMC Rocks!"
+                Style="{StaticResource HeaderLabelStyle}"
+                />
+
+            <TextBox
+                Grid.Row="1"
+                Grid.Column="0"
+                Text="Enter Text Here"/>
+
+            <!--
+                Set properties and values here
+            .-->
+            <TextBox
+                Grid.Row="1"
+                Grid.Column="0"
+                Text="Enter Text Here"/>
+
+            <!--
+                Define a style and set the style property here.
+            -->
+            <TextBox
+                Grid.Row="1"
+                Grid.Column="0"
+                Text="Enter Text Here"/>
+
+            <Button
+                Grid.Row="2"
+                Grid.Column="0"
+                Content="Push Me"/>
+
+            <!--
+                Set properties and values here
+            .-->
+            <Button
+                Grid.Row="2"
+                Grid.Column="0"
+                Content="Push Me"/>
+
+            <!--
+                Define a style and set the style property here.
+            -->
+            <Button
+                Grid.Row="2"
+                Grid.Column="0"
+                Content="Push Me"/>
+
         </Grid>
-        
     </Grid>
 </Window>
