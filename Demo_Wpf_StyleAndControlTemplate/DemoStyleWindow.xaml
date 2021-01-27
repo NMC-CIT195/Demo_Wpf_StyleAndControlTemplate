@@ -27,6 +27,7 @@
             <Setter Property="Template">
                 <Setter.Value>
                     <ControlTemplate TargetType="Label">
+                        
                         <ContentPresenter
                             HorizontalAlignment="Center"
                             VerticalAlignment="Center"
